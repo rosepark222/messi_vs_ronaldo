@@ -3,6 +3,13 @@ LTSM RNN traning and testing for the traces for messi (left bottom to right top)
 
 It trains 10 (x,y) trance points to classfy in one of three -- messi, ronaldo, and short messi (masking last 5 points to zeros).
 
+When you use fit_generator, the number of samples processed for each epoch is batch_size * steps_per_epochs. From the Keras documentation for fit_generator: https://keras.io/models/sequential/
+https://stackoverflow.com/questions/43457862/whats-the-difference-between-samples-per-epoch-and-steps-per-epoch-in-fit-g
+steps_per_epoch: Total number of steps (batches of samples) to yield from generator before declaring one epoch finished and starting the next epoch. It should typically be equal to the number of unique samples of your dataset divided by the batch size.
+
+
+
+
 batch size = 1000
 batches per epoch = 30
 epoch = 10
